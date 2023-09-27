@@ -13,6 +13,7 @@ function Invoke-BrewUpdateAndOutdatedCask {
     brew outdated --cask @args
 }
 Set-Alias -Name bcubo -Value Invoke-BrewUpdateAndOutdatedCask
+Export-ModuleMember -Function Invoke-BrewUpdateAndOutdatedCask -Alias bcubo
 
 function Invoke-BrewUpgradeCaskAndCleanup {
     brew upgrade --cask
@@ -20,16 +21,19 @@ function Invoke-BrewUpgradeCaskAndCleanup {
     brew cleanup @args
 }
 Set-Alias -Name bcubc -Value Invoke-BrewUpgradeCaskAndCleanup
+Export-ModuleMember -Function Invoke-BrewUpgradeCaskAndCleanup -Alias bcubc
 
 function Invoke-BrewPin {
     brew pin @args
 }
 Set-Alias -Name brewp -Value Invoke-BrewPin
+Export-ModuleMember -Function Invoke-BrewPin -Alias brewp
 
 function Invoke-BrewListPinned {
     brew list --pinned @args
 }
 Set-Alias -Name brewsp -Value Invoke-BrewListPinned
+Export-ModuleMember -Function Invoke-BrewListPinned -Alias brewsp
 
 function Invoke-BrewUpgradeAndCleanup {
     brew upgrade
@@ -37,6 +41,7 @@ function Invoke-BrewUpgradeAndCleanup {
     brew cleanup @args
 }
 Set-Alias -Name bubc -Value Invoke-BrewUpgradeAndCleanup
+Export-ModuleMember -Function Invoke-BrewUpgradeAndCleanup -Alias bubc
 
 function Invoke-BrewUpgradeGreedyAndCleanup {
     brew upgrade --greedy
@@ -44,6 +49,7 @@ function Invoke-BrewUpgradeGreedyAndCleanup {
     brew cleanup @args
 }
 Set-Alias -Name bugbc -Value Invoke-BrewUpgradeGreedyAndCleanup
+Export-ModuleMember -Function Invoke-BrewUpgradeGreedyAndCleanup -Alias bugbc
 
 function Invoke-BrewUpdateAndOutdated {
     brew update
@@ -51,6 +57,7 @@ function Invoke-BrewUpdateAndOutdated {
     brew outdated @args
 }
 Set-Alias -Name bubo -Value Invoke-BrewUpdateAndOutdated
+Export-ModuleMember -Function Invoke-BrewUpdateAndOutdated -Alias bubo
 
 function Invoke-BrewUpdateAndOutdatedAndUpgradeAndCleanup {
     Invoke-BrewUpdateAndOutdated @args
@@ -58,6 +65,7 @@ function Invoke-BrewUpdateAndOutdatedAndUpgradeAndCleanup {
     Invoke-BrewUpgradeAndCleanup @args
 }
 Set-Alias -Name bubu -Value Invoke-BrewUpdateAndOutdatedAndUpgradeAndCleanup
+Export-ModuleMember -Function Invoke-BrewUpdateAndOutdatedAndUpgradeAndCleanup -Alias bubu
 
 function Invoke-BrewUpdateAndOutdatedAndUpgradeGreedyAndCleanup {
     Invoke-BrewUpdateAndOutdated @args
@@ -65,16 +73,16 @@ function Invoke-BrewUpdateAndOutdatedAndUpgradeGreedyAndCleanup {
     Invoke-BrewUpgradeGreedyAndCleanup @args
 }
 Set-Alias -Name bubug -Value Invoke-BrewUpdateAndOutdatedAndUpgradeGreedyAndCleanup
+Export-ModuleMember -Function Invoke-BrewUpdateAndOutdatedAndUpgradeGreedyAndCleanup -Alias bubug
 
 function Invoke-BrewUpgradeFormula {
     brew upgrade --formula @args
 }
 Set-Alias -Name bfu -Value Invoke-BrewUpgradeFormula
+Export-ModuleMember -Function Invoke-BrewUpgradeFormula -Alias bfu
 
 function Invoke-BrewUninstallZap {
     brew uninstall --zap @args
 }
 Set-Alias -Name buz -Value Invoke-BrewUninstallZap
-
-
-Export-ModuleMember -Function * -Alias *
+Export-ModuleMember -Function Invoke-BrewUninstallZap -Alias buz
